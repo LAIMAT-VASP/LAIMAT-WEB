@@ -79,10 +79,9 @@ function calculVitesseDepuishauteur() {
   let hauteur = parseInt(document.getElementById("hauteur").value);
 
   axios.get(apiUrl + "speed?isJson=true&height=" + hauteur).then((response) => {
-    let vitesse = response.data.speedInKilometers;
-    let vitesseKmh = Math.round(vitesse * 100) / 100;
+    let vitesse = response.data.speedInMeters;
 
-    document.getElementById("vitesse").value = vitesseKmh + " km/h";
+    document.getElementById("vitesse").value = vitesse + " km/h";
     document.getElementById("hauteurDepart").innerHTML = hauteur;
     document.getElementById("hauteurDepartMoitie").innerHTML = hauteur / 2;
 
