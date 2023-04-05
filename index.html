@@ -1,7 +1,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Calcul de l'hypoténuse</title>
+    <title>LAIMAT</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -83,7 +83,44 @@
           </div>
         </div>
 
-        <div class="col-md-6">Bonjour</div>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="hauteur">Hauteur</label>
+              <input
+                type="number"
+                class="form-control"
+                id="hauteur"
+                placeholder="Entrez la hauteur de la chute"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary espace-bouton"
+              onclick="calculVitesseDepuishauteur()"
+            >
+              Calculer la vitesse de la chute à l'impact
+            </button>
+
+            <div class="form-group">
+              <label for="vitesse">Vitesse de la chute à l'impact:</label>
+              <input class="form-control" id="vitesse" readonly />
+            </div>
+          </form>
+
+          <!-- Animation chute -->
+          <div class="form-group">
+            <div class="vertical-line">
+              <div class="start"><p id="hauteurDepart">X</p></div>
+              <div class="quarter"></div>
+              <div class="half"><p id="hauteurDepartMoitie">X/2</p></div>
+              <div class="three-quarters"></div>
+              <div class="end"><p>0</p></div>
+              <canvas id="canvas"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="scripts/index.js"></script>

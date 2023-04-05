@@ -19,3 +19,63 @@
 .triangle-image {
   width: 550px;
 }
+
+.espace-bouton {
+  margin-top: 90px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 300px;
+  background-color: black;
+  position: relative;
+  margin-left: 150px;
+}
+.quarter,
+.half,
+.three-quarters {
+  width: 10px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+}
+
+.start,
+.end {
+  width: 16px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+}
+
+.start > p,
+.end > p,
+.half > p {
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  left: -50px;
+  top: -10px;
+}
+
+.quarter {
+  top: 25%;
+  left: -5px;
+}
+.half {
+  top: 50%;
+  left: -5px;
+}
+.three-quarters {
+  top: 75%;
+  left: -5px;
+}
+.start {
+  top: 0;
+  left: -8px;
+}
+
+.end {
+  top: 100%;
+  left: -8px;
+}
