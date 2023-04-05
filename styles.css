@@ -1,0 +1,21 @@
+.container {
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.triangle {
+  position: relative;
+}
+
+.valeur-cote {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.triangle-image {
+  width: 550px;
+}
