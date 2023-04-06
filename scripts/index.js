@@ -1,6 +1,38 @@
 const apiUrl = "http://localhost:5000/"; // URL de l'API
 
 function calculerHypotenuse() {
+  // Vérifier que les valeurs des côtés sont bien des nombres
+  if (
+    document.getElementById("cote1").value == "" ||
+    document.getElementById("cote2").value == ""
+  ) {
+    document.getElementById("hypotenuse").value = "0";
+    alert("Les valeurs des côtés doivent être des nombres");
+    return;
+  }
+
+  // check if values are between 1 and 10000
+  if (
+    document.getElementById("cote1").value < 1 ||
+    document.getElementById("cote1").value > 10000 ||
+    document.getElementById("cote2").value < 1 ||
+    document.getElementById("cote2").value > 10000
+  ) {
+    document.getElementById("hypotenuse").value = "0";
+    alert("Les valeurs des côtés doivent être entre 1 et 10000");
+    return;
+  }
+
+  // Vérifier que les valeurs des côtés sont bien des nombres
+  if (
+    isNaN(document.getElementById("cote1").value) ||
+    isNaN(document.getElementById("cote2").value)
+  ) {
+    document.getElementById("hypotenuse").value = "0";
+    alert("Les valeurs des côtés doivent être des nombres");
+    return;
+  }
+
   // Récupérer les valeurs des côtés
   let cote1 = parseInt(document.getElementById("cote1").value);
   let cote2 = parseInt(document.getElementById("cote2").value);
