@@ -63,6 +63,9 @@ function calculerHypotenuse() {
     document.getElementById("cote-triangle1").innerHTML = 49;
     document.getElementById("cote-triangle2").innerHTML = 3;
     document.getElementById("cote-triangle3").innerHTML = "Macron démission";
+
+    let son = new Audio("sounds/indign.mp3");
+    son.play();
     return;
   }
 
@@ -197,6 +200,10 @@ function calculVitesseDepuishauteur() {
     document.getElementById("vitesse").value = vitesse + " km/h";
     document.getElementById("hauteurDepart").innerHTML = hauteur;
     document.getElementById("hauteurDepartMoitie").innerHTML = hauteur / 2;
+
+    // play sound
+    let audio = new Audio("sounds/sound.mp3");
+    audio.play();
 
     defineRandomObject();
 
