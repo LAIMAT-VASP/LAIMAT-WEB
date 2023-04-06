@@ -105,6 +105,24 @@ function calculVitesseDepuishauteur() {
     document.getElementById("hauteur").value == 0
   ) {
     document.getElementById("vitesse").value = "0 km/h";
+    alert("La valeur de la hauteur doit être un nombre");
+    return;
+  }
+
+  // check if values are between 1 and 10000
+  if (
+    document.getElementById("hauteur").value < 1 ||
+    document.getElementById("hauteur").value > 10000
+  ) {
+    document.getElementById("vitesse").value = "0 km/h";
+    alert("La valeur de la hauteur doit être entre 1 et 10000");
+    return;
+  }
+
+  // Vérifier que les valeurs des côtés sont bien des nombres
+  if (isNaN(document.getElementById("hauteur").value)) {
+    document.getElementById("vitesse").value = "0 km/h";
+    alert("La valeur de la hauteur doit être un nombre");
     return;
   }
 
