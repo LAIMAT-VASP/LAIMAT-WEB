@@ -1,5 +1,26 @@
 const apiUrl = "http://localhost:5000/"; // URL de l'API
 
+let ok = new Image();
+ok.src = "images/ok.png";
+
+let aymericok = new Image();
+aymericok.src = "images/aymericok.png";
+
+let glouglou = new Image();
+glouglou.src = "images/glouglou.png";
+
+let luciedodo = new Image();
+luciedodo.src = "images/luciedodo.png";
+
+let sarko = new Image();
+sarko.src = "images/sarko.png";
+
+let standodo = new Image();
+standodo.src = "images/standodo.png";
+
+let stanstare = new Image();
+stanstare.src = "images/stanstare.png";
+
 function calculerHypotenuse() {
   // Vérifier que les valeurs des côtés sont bien des nombres
   if (
@@ -69,8 +90,38 @@ let canvas = document.getElementById("canvas");
 canvas.width = 400;
 canvas.height = 300;
 
+// initialisation de l'objet avec une image aléatoire parmi les 6
 let object = new Image();
-object.src = "images/ok.png";
+
+function defineRandomObject() {
+  let random = Math.floor(Math.random() * 6);
+  switch (random) {
+    case 0:
+      object = ok;
+      break;
+    case 1:
+      object = aymericok;
+      break;
+    case 2:
+      object = glouglou;
+      break;
+    case 3:
+      object = luciedodo;
+      break;
+    case 4:
+      object = sarko;
+      break;
+    case 5:
+      object = standodo;
+      break;
+    case 6:
+      object = stanstare;
+      break;
+    default:
+      object = ok;
+      break;
+  }
+}
 
 let position = {
   x: canvas.width / 2 - object.width / 2,
@@ -146,6 +197,8 @@ function calculVitesseDepuishauteur() {
     document.getElementById("vitesse").value = vitesse + " km/h";
     document.getElementById("hauteurDepart").innerHTML = hauteur;
     document.getElementById("hauteurDepartMoitie").innerHTML = hauteur / 2;
+
+    defineRandomObject();
 
     stopAnimation();
     animate();
