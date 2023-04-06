@@ -33,6 +33,18 @@ function calculerHypotenuse() {
     return;
   }
 
+  // if valeurs == 49 et 3 do something funny
+  if (
+    document.getElementById("cote1").value == 49 &&
+    document.getElementById("cote2").value == 3
+  ) {
+    document.getElementById("hypotenuse").value = "50";
+    document.getElementById("cote-triangle1").innerHTML = 49;
+    document.getElementById("cote-triangle2").innerHTML = 3;
+    document.getElementById("cote-triangle3").innerHTML = "Macron démission";
+    return;
+  }
+
   // Récupérer les valeurs des côtés
   let cote1 = parseInt(document.getElementById("cote1").value);
   let cote2 = parseInt(document.getElementById("cote2").value);
